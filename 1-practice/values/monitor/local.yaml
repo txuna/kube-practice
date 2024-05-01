@@ -1,0 +1,15 @@
+replicaCount: 1
+
+image:
+  repository: txuna/kind-monitor
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "latest"
+
+
+service:
+  port: 5000
+  type: ClusterIP
+
+config:
+  DST-DEPLOY: webapp

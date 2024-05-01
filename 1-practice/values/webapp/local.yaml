@@ -1,0 +1,15 @@
+replicaCount: 3
+
+image:
+  repository: txuna/kind-webapp
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "latest"
+
+
+service:
+  port: 7000
+  type: ClusterIP
+
+config:
+  BIND-PORT: 7000
